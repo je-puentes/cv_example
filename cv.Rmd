@@ -1,0 +1,73 @@
+---
+name: José Eduardo Puentes Arteta
+date: "`r format(Sys.time(), '%B, %Y')`"
+position: 201621454
+address: Bogotá D.C., Colombia
+phone: +57 316 8094645
+email: je.puentes@uniandes.edu.co
+github: je-puentes
+headcolor: 414141
+output: vitae::awesomecv
+---
+#Idiomas
+  - Español
+  - Inglés
+  - Portugués
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+
+#Eduacación
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "Pregrados en Economía y en Gobierno y Asuntos Públicos", "Universidad de los Andes","Bogotá D.C., Colombia", "2017 - presente", "PGA 4.21 - hasta 26/05/2019",
+  "Opción en Matemáticas", "Universidad de los Andes","Bogotá D.C., Colombia","2018 - presente"," "
+
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details)
+```
+
+#Lenguajes de Programación o Paquetes Estadísticos
+  
+  - **Stata**
+    + Gráficas;
+    + Manejo de bases de datos
+    + Análisis Estadísticos
+  
+  - **R**
+    + Tidyverse
+    + Rmarkdown
+    + forecast
+  
+  - **LaTex**
+    + Producción y elaboración de textos
+  
+#Cursos relevantes tomados
+```{r}
+tribble(
+  ~ course, ~ nothing, ~ dates,
+  "Taller de Stata", "U. de los Andes", "2018-2",
+  "Taller de R","U. de los Andes", "2019-1",
+  "Econometría 1","U. de los Andes", "2018-2",
+  "Econometría 2","U. de los Andes", "2019-1",
+  "Matemática Estructural","U. de los Andes", "2018-2"
+) %>%
+  brief_entries(course, dates, nothing)
+```
+
+#Experiencia 
+
+```{r}
+tribble(
+  ~ job, ~ date, ~organization, 
+  "Tutor de apoyo a estudiantes", "2018-1", "Escuela de Gobierno, UniAndes",
+  "Tutor de apoyo a estudiantes", "2018-2", "Escuela de Gobierno, UniAndes"
+) %>%
+  brief_entries(job,date, organization)
+```
+
